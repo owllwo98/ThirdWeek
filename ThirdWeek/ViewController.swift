@@ -13,9 +13,19 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var secondTextField: UITextField!
     @IBOutlet var mapView: MKMapView!
-
-    let pickerView = UIPickerView()
     
+    let user: [User] = [
+        User(name: "a"),
+        User(name: "b")
+    ]
+    
+    
+    let person: [User] = [
+        .init(name: "a"),
+        .init(name: "b")
+    ]
+    
+    let pickerView = UIPickerView()
     
     let list = ["가", "나", "다"]
     let array = ["1", "2", "3", "4",]
@@ -34,6 +44,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         
         configureMapView()
+    }
+}
+
+class User {
+    var name: String
+    init(name: String) {
+        self.name = name
     }
 }
 
@@ -65,6 +82,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
+// MARK: TextField 설정
 extension ViewController: UITextFieldDelegate {
     
     // did end on exit 이랑은 조금 다르다
@@ -83,6 +101,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: Configure 설정
 extension ViewController {
     
     /*

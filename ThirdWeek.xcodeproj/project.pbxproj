@@ -14,6 +14,10 @@
 		5E3283C12D2E4E3E00A5DC94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3283C02D2E4E3E00A5DC94 /* Assets.xcassets */; };
 		5E3283C42D2E4E3E00A5DC94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3283C22D2E4E3E00A5DC94 /* LaunchScreen.storyboard */; };
 		5E3283F12D2E6A9000A5DC94 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3283F02D2E6A9000A5DC94 /* Model.swift */; };
+		5E3283F72D2F58E800A5DC94 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3283F62D2F58E800A5DC94 /* SampleCollectionViewController.swift */; };
+		5E3283FA2D2F5B9300A5DC94 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3283F82D2F5B9300A5DC94 /* SampleCollectionViewCell.swift */; };
+		5E3283FB2D2F5B9300A5DC94 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3283F92D2F5B9300A5DC94 /* SampleCollectionViewCell.xib */; };
+		5E3283FD2D2F696400A5DC94 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3283FC2D2F696400A5DC94 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		5E3283C32D2E4E3E00A5DC94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E3283C52D2E4E3E00A5DC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E3283F02D2E6A9000A5DC94 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5E3283F62D2F58E800A5DC94 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		5E3283F82D2F5B9300A5DC94 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E3283F92D2F5B9300A5DC94 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
+		5E3283FC2D2F696400A5DC94 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +69,15 @@
 				5E3283B72D2E4E3C00A5DC94 /* AppDelegate.swift */,
 				5E3283B92D2E4E3C00A5DC94 /* SceneDelegate.swift */,
 				5E3283BB2D2E4E3C00A5DC94 /* ViewController.swift */,
+				5E3283F82D2F5B9300A5DC94 /* SampleCollectionViewCell.swift */,
+				5E3283F92D2F5B9300A5DC94 /* SampleCollectionViewCell.xib */,
 				5E3283BD2D2E4E3C00A5DC94 /* Main.storyboard */,
+				5E3283F62D2F58E800A5DC94 /* SampleCollectionViewController.swift */,
 				5E3283C02D2E4E3E00A5DC94 /* Assets.xcassets */,
 				5E3283C22D2E4E3E00A5DC94 /* LaunchScreen.storyboard */,
 				5E3283C52D2E4E3E00A5DC94 /* Info.plist */,
 				5E3283F02D2E6A9000A5DC94 /* Model.swift */,
+				5E3283FC2D2F696400A5DC94 /* UIViewController+Extension.swift */,
 			);
 			path = ThirdWeek;
 			sourceTree = "<group>";
@@ -130,6 +142,7 @@
 			files = (
 				5E3283C42D2E4E3E00A5DC94 /* LaunchScreen.storyboard in Resources */,
 				5E3283C12D2E4E3E00A5DC94 /* Assets.xcassets in Resources */,
+				5E3283FB2D2F5B9300A5DC94 /* SampleCollectionViewCell.xib in Resources */,
 				5E3283BF2D2E4E3C00A5DC94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3283F72D2F58E800A5DC94 /* SampleCollectionViewController.swift in Sources */,
 				5E3283BC2D2E4E3C00A5DC94 /* ViewController.swift in Sources */,
 				5E3283B82D2E4E3C00A5DC94 /* AppDelegate.swift in Sources */,
 				5E3283BA2D2E4E3C00A5DC94 /* SceneDelegate.swift in Sources */,
+				5E3283FD2D2F696400A5DC94 /* UIViewController+Extension.swift in Sources */,
+				5E3283FA2D2F5B9300A5DC94 /* SampleCollectionViewCell.swift in Sources */,
 				5E3283F12D2E6A9000A5DC94 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
