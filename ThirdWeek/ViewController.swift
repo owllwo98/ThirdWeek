@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var secondTextField: UITextField!
@@ -35,7 +35,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         configureMapView()
     }
-    
+}
+
+
+// MARK: 피커뷰 설정
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return component == 0 ? list.count : array.count
@@ -59,6 +63,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             secondTextField.text = array[row]
         }
     }
+}
+
+extension ViewController: UITextFieldDelegate {
     
     // did end on exit 이랑은 조금 다르다
     // 키보드에서 엔터키 클릭했을 때
@@ -74,6 +81,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         return true
     }
+}
+
+extension ViewController {
     
     /*
      1. 중간지점
@@ -94,4 +104,3 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         mapView.addAnnotation(annotation)
     }
 }
-
