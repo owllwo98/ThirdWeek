@@ -12,11 +12,25 @@ class SampleCollectionViewController: UIViewController {
     @IBOutlet var listCollectionView: UICollectionView!
     @IBOutlet var searchBar: UISearchBar!
     
-
-    var list: [Int] = Array<Int>(1...100)
+    // 전체 데이터
+    var totalList: [Int] = Array<Int>(1...100)
+    
+    // 필터링된 데이터
+    lazy var list: [Int] = totalList
+    /*
+     var list: [Int] = totalList -> 이거 왜 안됨?
+     인스턴스 프로퍼티는 동시에 초기화된다.
+     따라서 속도를 조절해주어야 하니까
+     lazy var list: [Int] = totalList 와 같이 lazy 를 써준다.
+     */
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+//        searchBar.showsCancelButton = true
 
         configureCollectionView()
         configureCollectionViewLayout()
@@ -86,7 +100,7 @@ extension SampleCollectionViewController: UICollectionViewDelegate, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SampleCollectionViewCell.identifier, for: indexPath) as! SampleCollectionViewCell
         
         cell.backgroundColor = .brown
-        cell.titleLabel.text = "\(indexPath.item)"
+        cell.titleLabel.text = "\(list[indexPath.item])"
         cell.image.backgroundColor = .white
         
         // 이게 실행되는 시점에서는 이상하게 그려진다
@@ -106,6 +120,45 @@ extension SampleCollectionViewController: UICollectionViewDelegate, UICollection
 }
 
 extension SampleCollectionViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        print(#function)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        searchBar.showsCancelButton = false
+    }
+    
+    // 검색하려고할때 화면전환하는 경우도 있다.
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print(#function)
+//        searchBar.showsCancelButton = true
+        
+        // 조금 더 자연스러운 등장
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        var result: [Int] = []
+        
+        if searchText == "" {
+            // 전체 데이터 가져와
+            // 근데 데이터가 무지막지하게 커지면?
+            result = totalList
+        } else {
+            for item in list {
+                if item == Int(searchText)! {
+                    result.append(item)
+                }
+            }
+        }
+
+        list = result
+        listCollectionView.reloadData()
+    }
     
 }
 
