@@ -49,6 +49,66 @@
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6s4-3K-tAc">
+            <objects>
+                <viewController id="dKX-OQ-GJj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Rv-KT-xNK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w71-QP-0wB">
+                                <rect key="frame" x="329" y="79" width="44" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Hf6-JN-D1a"/>
+                                    <constraint firstAttribute="height" constant="40" id="aLU-om-aE4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQK-rw-aHu">
+                                <rect key="frame" x="159" y="235" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="AZ4-Ia-Uej" kind="presentation" id="gFZ-Y9-BST"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="안녕하세요안녕하세연여" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMq-GL-HMi">
+                                <rect key="frame" x="20" y="79" width="289" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pto-x3-nnk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iuQ-qa-ueH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w71-QP-0wB" firstAttribute="top" secondItem="iuQ-qa-ueH" secondAttribute="top" constant="20" id="0Mu-qp-7U1"/>
+                            <constraint firstItem="IMq-GL-HMi" firstAttribute="leading" secondItem="iuQ-qa-ueH" secondAttribute="leading" constant="20" id="9iW-x7-qIv"/>
+                            <constraint firstItem="iuQ-qa-ueH" firstAttribute="trailing" secondItem="w71-QP-0wB" secondAttribute="trailing" constant="20" id="CCk-LP-1IL"/>
+                            <constraint firstItem="IMq-GL-HMi" firstAttribute="top" secondItem="iuQ-qa-ueH" secondAttribute="top" constant="20" id="R4f-A1-Jac"/>
+                            <constraint firstItem="w71-QP-0wB" firstAttribute="leading" secondItem="IMq-GL-HMi" secondAttribute="trailing" constant="20" id="ZOP-mL-Pcj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ic2-48-8Eh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.6488549618321" y="4.9295774647887329"/>
+        </scene>
+        <!--SettingStoryboard-->
+        <scene sceneID="W7s-Lj-scH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingStoryboard" id="AZ4-Ia-Uej" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n88-QO-Ffb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2538" y="-56"/>
+        </scene>
         <!--Sample Collection View Controller-->
         <scene sceneID="MFJ-qz-dBm">
             <objects>

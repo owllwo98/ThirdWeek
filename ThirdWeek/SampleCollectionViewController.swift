@@ -37,13 +37,16 @@ class SampleCollectionViewController: UIViewController {
         configureListCollectionViewLayout()
         
         // DispatchQueue.main.async
-        print("1")
-        DispatchQueue.main.async {
-            print("2")
-        }
+//        print("1")
+//        DispatchQueue.main.async {
+//            print("2")
+//        }
+//        
+//        print("3")
+//        print("4")
         
-        print("3")
-        print("4")
+        print(listCollectionView.frame.height)
+        print(listCollectionView.frame.width)
     }
     
     func configureCollectionView() {
@@ -65,6 +68,7 @@ class SampleCollectionViewController: UIViewController {
         // cell 을 페이지처럼 해줌
         bannerCollectionView.isPagingEnabled = true
         bannerCollectionView.collectionViewLayout = SampleCollectionViewController.CollectionViewLayout()
+        listCollectionView.isPagingEnabled = true
     }
     
     func configureListCollectionViewLayout() {
@@ -81,10 +85,15 @@ class SampleCollectionViewController: UIViewController {
         layout.scrollDirection = .vertical
         
         let deviceWidth = UIScreen.main.bounds.width
+//        let listCollectionViewHeight = listCollectionView.frame.height
         let cellWidth = deviceWidth - (sectionInset * 2) - (cellSpacing * 2)
         
-        layout.itemSize = CGSize(width: cellWidth / 3, height: cellWidth / 3 * 1.2)
+        
+        layout.itemSize = CGSize(width: cellWidth / 3 , height: cellWidth / 3)
         layout.sectionInset = UIEdgeInsets(top: sectionInset, left: sectionInset, bottom: sectionInset, right: sectionInset)
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+       
         
         listCollectionView.collectionViewLayout = layout
     }
@@ -112,7 +121,6 @@ extension SampleCollectionViewController: UICollectionViewDelegate, UICollection
         // 가장 마지막에 실행
         DispatchQueue.main.async {
             cell.image.layer.cornerRadius = cell.image.frame.width / 2
-            print("5")
         }
         
         return cell

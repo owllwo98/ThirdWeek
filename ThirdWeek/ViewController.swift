@@ -27,7 +27,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     let pickerView = UIPickerView()
     
-    let list = ["가", "나", "다"]
+    var list = ["가", "나", "다"]
     let array = ["1", "2", "3", "4",]
     
     override func viewDidLoad() {
