@@ -48,7 +48,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mHG-Z9-IeH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bubble_you_dark" translatesAutoresizingMaskIntoConstraints="NO" id="mHG-Z9-IeH">
                         <rect key="frame" x="56" y="33" width="49.333333333333343" height="110"/>
                     </imageView>
                 </subviews>
@@ -74,4 +74,7 @@
             <point key="canvasLocation" x="87.022900763358777" y="25"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chat_bubble_you_dark" width="42" height="51.333332061767578"/>
+    </resources>
 </document>

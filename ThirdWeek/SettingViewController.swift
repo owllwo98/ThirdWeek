@@ -99,7 +99,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath)
         
-        cell.textLabel?.text = "테스트"
+        cell.textLabel?.text = SettingOptions.allCases[indexPath.section].subOption[indexPath.row]
         
         return cell
     }
